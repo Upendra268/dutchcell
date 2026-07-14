@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Next Level Infra & Leasing creates landmark campuses and commercial spaces across Hyderabad.">
+  <title>The Next Level Infra &amp; Leasing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --tnl-cream: #fff8dc;
+      --tnl-cream-deep: #fff3b0;
+      --tnl-gold: #ffe87a;
+      --tnl-maroon: #6b1a1a;
+      --tnl-maroon-dark: #4a0e0e;
+      --tnl-amber: #c97820;
+      --tnl-text: #1a0505;
+      --tnl-muted: #694242;
+      --tnl-line: #e6d7b2;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 82px;
+    }
+
+    body {
+      background: var(--tnl-cream);
+      color: var(--tnl-text);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+      font-family: "Playfair Display", serif;
+    }
+
+    .section-space {
+      padding: 6.5rem 0;
+    }
+
+    .bg-cream {
+      background: var(--tnl-cream);
+    }
+
+    .bg-maroon {
+      background: var(--tnl-maroon-dark);
+    }
+
+    .text-maroon {
+      color: var(--tnl-maroon);
+    }
+
+    .text-muted-custom {
+      color: var(--tnl-muted);
+    }
+
+    .navbar {
+      background: rgba(255, 248, 220, .96);
+      border-bottom: 2px solid var(--tnl-maroon);
+      backdrop-filter: blur(12px);
+      transition: box-shadow .25s ease;
+    }
+
+    .navbar.is-scrolled {
+      box-shadow: 0 5px 24px rgba(74, 14, 14, .12);
+    }
+
+    .navbar-brand {
+      line-height: 1;
+    }
+
+    .brand-title {
+      color: var(--tnl-maroon);
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+      color: var(--tnl-muted);
+      display: block;
+      font-size: .57rem;
+      letter-spacing: .2em;
+      margin-top: .3rem;
+      text-transform: uppercase;
+    }
+
+    .navbar .nav-link {
+      color: var(--tnl-text);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus {
+      color: var(--tnl-maroon);
+    }
+
+    .btn-maroon {
+      background: var(--tnl-maroon);
+      border-color: var(--tnl-maroon);
+      color: #fff;
+    }
+
+    .btn-maroon:hover,
+    .btn-maroon:focus {
+      background: var(--tnl-maroon-dark);
+      border-color: var(--tnl-maroon-dark);
+      color: #fff;
+    }
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(45, 5, 5, .98) 0%, rgba(74, 14, 14, .94) 45%, rgba(74, 14, 14, .68) 100%),
+        url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=88") center/cover;
+      min-height: 100vh;
+      padding: 9rem 0 5rem;
+      position: relative;
+    }
+
+    .hero::before {
+      background-image: radial-gradient(rgba(255, 232, 122, .18) 1px, transparent 1px);
+      background-size: 38px 38px;
+      content: "";
+      inset: 0;
+      opacity: .4;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pill {
+      background: rgba(255, 243, 176, .11);
+      border: 1px solid rgba(255, 243, 176, .32);
+      border-radius: 50rem;
+      color: var(--tnl-cream-deep);
+      display: inline-flex;
+      font-size: .68rem;
+      font-weight: 700;
+      gap: .5rem;
+      letter-spacing: .15em;
+      padding: .42rem 1rem;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker {
+      color: rgba(255, 248, 220, .62);
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+    }
+
+    .hero h1 {
+      color: var(--tnl-cream);
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 900;
+      line-height: .98;
+    }
+
+    .hero h1 em {
+      color: var(--tnl-gold);
+      display: block;
+    }
+
+    .hero-description {
+      color: rgba(255, 248, 220, .65);
+      font-size: .98rem;
+      font-weight: 300;
+      line-height: 1.8;
+      max-width: 580px;
+    }
+
+    .hero-rule,
+    .section-rule {
+      background: var(--tnl-gold);
+      height: 3px;
+      width: 58px;
+    }
+
+    .btn-gold {
+      background: var(--tnl-gold);
+      border-color: var(--tnl-gold);
+      color: var(--tnl-maroon-dark);
+      font-size: .76rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      padding: .85rem 1.7rem;
+      text-transform: uppercase;
+    }
+
+    .btn-gold:hover {
+      background: var(--tnl-cream-deep);
+      border-color: var(--tnl-cream-deep);
+      color: var(--tnl-maroon-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-outline {
+      border-color: rgba(255, 248, 220, .35);
+      color: var(--tnl-cream);
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      padding: .85rem 1.7rem;
+      text-transform: uppercase;
+    }
+
+    .btn-hero-outline:hover {
+      border-color: var(--tnl-gold);
+      color: var(--tnl-gold);
+    }
+
+    .hero-stats {
+      border-top: 1px solid rgba(255, 248, 220, .13);
+      margin-top: 4rem;
+      padding-top: 2rem;
+    }
+
+    .stat-value {
+      color: var(--tnl-gold);
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: rgba(255, 248, 220, .42);
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      margin-top: .4rem;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      color: var(--tnl-amber);
+      font-size: .63rem;
+      font-weight: 700;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      color: var(--tnl-maroon);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .section-rule {
+      background: var(--tnl-maroon);
+      margin: 1.5rem 0 2rem;
+      width: 48px;
+    }
+
+    .body-copy {
+      color: var(--tnl-muted);
+      font-size: .92rem;
+      line-height: 1.85;
+    }
+
+    .pillar {
+      background: var(--tnl-cream);
+      border: 1px solid var(--tnl-line);
+      border-left: 4px solid var(--tnl-maroon);
+      height: 100%;
+      padding: 1.1rem;
+    }
+
+    .icon-box {
+      align-items: center;
+      background: var(--tnl-maroon);
+      border-radius: .2rem;
+      color: var(--tnl-gold);
+      display: inline-flex;
+      flex: 0 0 auto;
+      height: 42px;
+      justify-content: center;
+      width: 42px;
+    }
+
+    .quote-card {
+      background:
+        linear-gradient(145deg, rgba(74, 14, 14, .94), rgba(107, 26, 26, .9)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85") center/cover;
+      color: var(--tnl-cream);
+      min-height: 430px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .quote-card::after {
+      color: rgba(255, 248, 220, .1);
+      content: "“";
+      font-family: "Playfair Display", serif;
+      font-size: 16rem;
+      line-height: 1;
+      position: absolute;
+      right: 1rem;
+      top: -1rem;
+    }
+
+    .quote-card blockquote {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+      font-style: italic;
+      line-height: 1.45;
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-card,
+    .project-card {
+      border: 1px solid var(--tnl-line);
+      border-radius: .2rem;
+      box-shadow: none;
+      height: 100%;
+      transition: box-shadow .25s ease, transform .25s ease;
+    }
+
+    .feature-card {
+      border-top: 4px solid var(--tnl-maroon);
+    }
+
+    .feature-card:hover,
+    .project-card:hover {
+      box-shadow: 0 18px 45px rgba(74, 14, 14, .1);
+      transform: translateY(-5px);
+    }
+
+    .model-number {
+      color: var(--tnl-amber);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .text-link {
+      color: var(--tnl-maroon);
+      font-size: .75rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      color: var(--tnl-maroon-dark);
+    }
+
+    .project-card {
+      background: var(--tnl-cream);
+      overflow: hidden;
+    }
+
+    .project-image {
+      height: 230px;
+      object-fit: cover;
+      transition: transform .5s ease;
+      width: 100%;
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.04);
+    }
+
+    .project-image-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-badge {
+      background: var(--tnl-amber);
+      color: #fff;
+      font-size: .58rem;
+      font-weight: 700;
+      left: 1rem;
+      letter-spacing: .12em;
+      padding: .42rem .7rem;
+      position: absolute;
+      text-transform: uppercase;
+      top: 1rem;
+      z-index: 1;
+    }
+
+    .project-meta {
+      color: var(--tnl-amber);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .project-specs {
+      border-top: 1px solid var(--tnl-line);
+    }
+
+    .project-specs > div + div {
+      border-left: 1px solid var(--tnl-line);
+    }
+
+    .spec-value {
+      color: var(--tnl-maroon);
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .spec-label {
+      color: var(--tnl-muted);
+      font-size: .56rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .pipeline-card {
+      background:
+        linear-gradient(130deg, rgba(45, 5, 5, .92), rgba(74, 14, 14, .82)),
+        url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1400&q=85") center/cover;
+      color: var(--tnl-cream);
+      min-height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .pipeline-card::before {
+      border: 1px solid rgba(255, 232, 122, .13);
+      border-radius: 50%;
+      content: "";
+      height: 350px;
+      position: absolute;
+      right: -120px;
+      top: -120px;
+      width: 350px;
+    }
+
+    .dark-section .eyebrow {
+      color: var(--tnl-gold);
+    }
+
+    .dark-section .section-title {
+      color: var(--tnl-cream);
+    }
+
+    .dark-section .section-rule {
+      background: var(--tnl-gold);
+    }
+
+    .timeline {
+      position: relative;
+    }
+
+    .timeline::before {
+      border-top: 2px dashed rgba(255, 232, 122, .5);
+      content: "";
+      left: 10%;
+      position: absolute;
+      right: 10%;
+      top: 39px;
+    }
+
+    .timeline-item {
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-year {
+      align-items: center;
+      background: var(--tnl-maroon-dark);
+      border: 3px solid var(--tnl-gold);
+      border-radius: 50%;
+      color: var(--tnl-gold);
+      display: flex;
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      height: 78px;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      transition: background .25s ease, color .25s ease;
+      width: 78px;
+    }
+
+    .timeline-item:hover .timeline-year {
+      background: var(--tnl-gold);
+      color: var(--tnl-maroon-dark);
+    }
+
+    .leadership-photo {
+      align-items: center;
+      background:
+        linear-gradient(145deg, rgba(74, 14, 14, .62), rgba(107, 26, 26, .88)),
+        url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=85") center/cover;
+      border: 8px solid var(--tnl-maroon);
+      color: rgba(255, 248, 220, .75);
+      display: flex;
+      font-family: "Playfair Display", serif;
+      font-size: 4rem;
+      font-weight: 700;
+      justify-content: center;
+      min-height: 390px;
+      position: relative;
+    }
+
+    .leadership-photo::after {
+      border: 2px solid #d4b8a0;
+      content: "";
+      inset: 12px -16px -16px 12px;
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .role-chip {
+      background: #fff;
+      border: 1px solid var(--tnl-line);
+      border-left: 3px solid var(--tnl-maroon);
+    }
+
+    .milestone-card {
+      background: #fff;
+      border: 1px solid var(--tnl-line);
+      border-top: 3px solid var(--tnl-maroon);
+    }
+
+    .leadership-quote {
+      background: var(--tnl-maroon);
+      color: var(--tnl-cream);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item {
+      border: 1px solid rgba(255, 232, 122, .18);
+      min-height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item.large {
+      min-height: 456px;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      position: absolute;
+      transition: transform .45s ease;
+      width: 100%;
+    }
+
+    .gallery-item::after {
+      background: linear-gradient(transparent, rgba(25, 4, 4, .82));
+      content: "";
+      inset: 0;
+      position: absolute;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-caption {
+      bottom: 1rem;
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 600;
+      left: 1rem;
+      letter-spacing: .1em;
+      position: absolute;
+      right: 1rem;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .form-control,
+    .form-select {
+      background-color: var(--tnl-cream);
+      border-color: #d4b8a0;
+      border-radius: .2rem;
+      padding: .78rem .9rem;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      background-color: var(--tnl-cream);
+      border-color: var(--tnl-maroon);
+      box-shadow: 0 0 0 .2rem rgba(107, 26, 26, .09);
+    }
+
+    .form-label {
+      color: var(--tnl-muted);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      background: var(--tnl-maroon-dark);
+      color: rgba(255, 248, 220, .55);
+    }
+
+    footer a {
+      color: rgba(255, 248, 220, .55);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--tnl-gold);
+    }
+
+    .whatsapp {
+      align-items: center;
+      background: #25d366;
+      border-radius: 50%;
+      bottom: 1.5rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, .38);
+      color: #fff;
+      display: flex;
+      font-size: 1.6rem;
+      height: 54px;
+      justify-content: center;
+      position: fixed;
+      right: 1.5rem;
+      text-decoration: none;
+      transition: transform .2s ease;
+      width: 54px;
+      z-index: 1040;
+    }
+
+    .whatsapp:hover {
+      color: #fff;
+      transform: scale(1.08);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 991.98px) {
+      .section-space {
+        padding: 5rem 0;
+      }
+
+      .hero {
+        background-position: 62% center;
+      }
+
+      .timeline::before {
+        display: none;
+      }
+
+      .gallery-item.large {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero {
+        min-height: auto;
+        padding: 8.5rem 0 4.5rem;
+      }
+
+      .hero h1 {
+        font-size: 3.25rem;
+      }
+
+      .hero-stats .col-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .section-space {
+        padding: 4.25rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-title">The Next Level</span>
+        <span class="brand-subtitle">Infra &amp; Leasing Company</span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2 text-maroon"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3 pt-3 pt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#models">Our Models</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="btn btn-maroon btn-sm px-4 py-2 ms-lg-2" href="#contact">Enquire</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero d-flex align-items-center" id="home">
+    <div class="container hero-content">
+      <div class="row">
+        <div class="col-xl-9">
+          <div class="hero-pill mb-4"><i class="bi bi-stars"></i> TNL Works Private Limited · Hyderabad</div>
+          <p class="hero-kicker fs-5 mb-2">Tradition at Heart, Excellence in Action</p>
+          <h1 class="mb-4">Crafting the <em>next level</em><span class="d-block opacity-75">of living &amp; learning</span></h1>
+          <div class="hero-rule mb-4"></div>
+          <p class="hero-description mb-0">The Next Level Infra &amp; Leasing creates landmark campuses and commercial spaces that transform how communities live, learn, and grow — built to world-class standards across Hyderabad.</p>
+          <div class="d-flex flex-wrap gap-3 mt-5">
+            <a class="btn btn-gold" href="#projects">Explore Projects</a>
+            <a class="btn btn-hero-outline" href="#contact">Partner With Us</a>
+          </div>
+          <div class="row hero-stats g-4">
+            <div class="col-6 col-sm-3">
+              <div class="stat-value">2.95L+</div>
+              <div class="stat-label">Sq.ft Delivered</div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="stat-value">5</div>
+              <div class="stat-label">Campuses</div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="stat-value">12+</div>
+              <div class="stat-label">Acres</div>
+            </div>
+            <div class="col-6 col-sm-3">
+              <div class="stat-value">30+</div>
+              <div class="stat-label">Years Legacy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-space bg-white" id="about">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7 reveal">
+            <p class="eyebrow mb-2">Who We Are</p>
+            <h2 class="section-title">Infrastructure<br>built with purpose</h2>
+            <div class="section-rule"></div>
+            <p class="body-copy">The Next Level Infra &amp; Leasing is the flagship brand of <strong class="text-maroon">TNL Works Private Limited</strong> — a Hyderabad-based infra and leasing company dedicated to creating spaces that go beyond the conventional. We conceive, develop, and operate campuses and commercial assets that inspire communities.</p>
+            <p class="body-copy">From world-class sports campuses to thoughtfully designed children's learning environments and premium commercial real estate, every TNL project is purposeful, enduring, and deeply rooted in its community.</p>
+            <div class="row g-3 mt-3">
+              <div class="col-md-6">
+                <div class="pillar d-flex gap-3">
+                  <span class="icon-box"><i class="bi bi-buildings"></i></span>
+                  <div><h3 class="h6 text-maroon mb-1">Infra Excellence</h3><p class="small text-muted-custom mb-0">World-class construction quality meeting international standards.</p></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="pillar d-flex gap-3">
+                  <span class="icon-box"><i class="bi bi-people"></i></span>
+                  <div><h3 class="h6 text-maroon mb-1">Community First</h3><p class="small text-muted-custom mb-0">Spaces designed around the people who inhabit them.</p></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="pillar d-flex gap-3">
+                  <span class="icon-box"><i class="bi bi-geo-alt"></i></span>
+                  <div><h3 class="h6 text-maroon mb-1">Strategic Locations</h3><p class="small text-muted-custom mb-0">Hyderabad's fastest-growing micro-markets.</p></div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="pillar d-flex gap-3">
+                  <span class="icon-box"><i class="bi bi-handshake"></i></span>
+                  <div><h3 class="h6 text-maroon mb-1">Long-term Partnerships</h3><p class="small text-muted-custom mb-0">Relationships built on trust and transparency.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 reveal">
+            <div class="quote-card rounded-1 p-4 p-md-5 d-flex flex-column justify-content-end">
+              <blockquote class="mb-4">We don't build structures.<br>We build next levels.</blockquote>
+              <p class="small text-uppercase mb-0 opacity-75">— The Next Level Infra &amp; Leasing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-cream" id="models">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow mb-2">How We Work</p>
+          <h2 class="section-title">Three ways we<br>make it happen</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4 reveal">
+            <article class="card feature-card bg-white p-4">
+              <div class="card-body p-2">
+                <i class="bi bi-building-add fs-2 text-maroon"></i>
+                <p class="model-number mt-4 mb-2">Model 01</p>
+                <h3 class="h4 text-maroon">The Buy Model</h3>
+                <p class="body-copy">We identify and acquire land in premium high-growth locations, then develop it into landmark infrastructure from the ground up.</p>
+                <a class="text-link" href="#contact">Contact for details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 reveal">
+            <article class="card feature-card bg-white p-4">
+              <div class="card-body p-2">
+                <i class="bi bi-tools fs-2 text-maroon"></i>
+                <p class="model-number mt-4 mb-2">Model 02</p>
+                <h3 class="h4 text-maroon">The Develop Model</h3>
+                <p class="body-copy">You bring the plot; we bring the vision, execution, and operational excellence through a transparent development partnership.</p>
+                <a class="text-link" href="#contact">Contact for details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 reveal">
+            <article class="card feature-card bg-white p-4">
+              <div class="card-body p-2">
+                <i class="bi bi-lightbulb fs-2 text-maroon"></i>
+                <p class="model-number mt-4 mb-2">Model 03</p>
+                <h3 class="h4 text-maroon">The Ad-hoc Model</h3>
+                <p class="body-copy">For exceptional projects that do not fit a standard box, we evaluate the opportunity and bring our full capabilities to the proposition.</p>
+                <a class="text-link" href="#contact">Contact for details <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white" id="projects">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow mb-2">Our Portfolio</p>
+          <h2 class="section-title">Five campuses.<br>One vision.</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4 reveal">
+            <article class="card project-card">
+              <div class="project-image-wrap">
+                <span class="project-badge">Sports Campus</span>
+                <img class="project-image" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1000&q=85" alt="Outdoor athletics track at a sports campus">
+              </div>
+              <div class="card-body p-4">
+                <p class="project-meta mb-2">Est. 2018 · Beeramguda</p>
+                <h3 class="h4 text-maroon mb-1">Oakdale Campus</h3>
+                <p class="small fst-italic text-muted-custom">Where Innocence Meets Excellence</p>
+                <p class="body-copy">An 8-acre arena of world-class sports infrastructure and the region's benchmark for athletic excellence.</p>
+                <div class="row project-specs pt-3 text-center">
+                  <div class="col"><div class="spec-value">8</div><div class="spec-label">Acres</div></div>
+                  <div class="col"><div class="spec-value">85K+</div><div class="spec-label">Sq.ft</div></div>
+                  <div class="col"><div class="spec-value">Oct '18</div><div class="spec-label">Delivered</div></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 reveal">
+            <article class="card project-card">
+              <div class="project-image-wrap">
+                <span class="project-badge">Children's Campus</span>
+                <img class="project-image" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=85" alt="Students walking through a modern education campus">
+              </div>
+              <div class="card-body p-4">
+                <p class="project-meta mb-2">Est. 2025 · Beeramguda</p>
+                <h3 class="h4 text-maroon mb-1">Rajarshi Campus</h3>
+                <p class="small fst-italic text-muted-custom">Tradition at Heart. Excellence in Action.</p>
+                <p class="body-copy">2.5 acres of lush, luxury learning spaces with 1,35,000 sq.ft of thoughtfully designed infrastructure.</p>
+                <div class="row project-specs pt-3 text-center">
+                  <div class="col"><div class="spec-value">2.5</div><div class="spec-label">Acres</div></div>
+                  <div class="col"><div class="spec-value">1.35L</div><div class="spec-label">Sq.ft</div></div>
+                  <div class="col"><div class="spec-value">Oct '25</div><div class="spec-label">Phase I</div></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 reveal">
+            <article class="card project-card">
+              <div class="project-image-wrap">
+                <span class="project-badge">Commercial · Live</span>
+                <img class="project-image" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85" alt="Glass facade of a premium commercial building">
+              </div>
+              <div class="card-body p-4">
+                <p class="project-meta mb-2">Est. 2024 · Nallagandla</p>
+                <h3 class="h4 text-maroon mb-1">Navodaya Estates</h3>
+                <p class="small fst-italic text-muted-custom">The address Nallagandla has been waiting for</p>
+                <p class="body-copy">A G+4 commercial landmark built for retail, healthcare, wellness, co-working, F&amp;B and modern business.</p>
+                <div class="row project-specs pt-3 text-center">
+                  <div class="col"><div class="spec-value">G+4</div><div class="spec-label">Floors</div></div>
+                  <div class="col"><div class="spec-value">95K+</div><div class="spec-label">Sq.ft</div></div>
+                  <div class="col"><div class="spec-value">Jul '26</div><div class="spec-label">Completion</div></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal">
+            <article class="card project-card">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 project-image-wrap">
+                  <span class="project-badge">Legacy Campus</span>
+                  <img class="project-image h-100" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=85" alt="Modern school building exterior">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body p-4">
+                    <p class="project-meta mb-2">Est. 2003 · Hyderabad</p>
+                    <h3 class="h4 text-maroon mb-1">Life Line Campus</h3>
+                    <p class="small fst-italic text-muted-custom">Where Records Are Not Broken — They Are Set</p>
+                    <p class="body-copy">100% board-pass record every year since 2003, supported by arts, sports and academic excellence.</p>
+                    <div class="row project-specs pt-3 text-center">
+                      <div class="col"><div class="spec-value">2,500</div><div class="spec-label">Sq.yds</div></div>
+                      <div class="col"><div class="spec-value">30K+</div><div class="spec-label">Sq.ft</div></div>
+                      <div class="col"><div class="spec-value">100%</div><div class="spec-label">Results</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6 reveal">
+            <article class="pipeline-card rounded-1 p-4 p-md-5 d-flex align-items-end">
+              <div class="position-relative">
+                <span class="badge rounded-pill mb-3" style="background:rgba(255,243,176,.18);color:var(--tnl-cream-deep)">Coming Soon</span>
+                <p class="project-meta text-white-50 mb-2">Pipeline Project</p>
+                <h3 class="h2 text-white">Sports, Celebrations<br>&amp; Retreat</h3>
+                <p class="text-white-50">A destination where community gathers, milestones are marked, and legends are made.</p>
+                <a class="text-warning text-decoration-none fw-semibold small" href="#contact">Register Your Interest <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-maroon dark-section" id="journey">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow mb-2">Our Journey</p>
+          <h2 class="section-title">Over 35 years of<br>educational excellence</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="row timeline g-5 mt-2 text-center">
+          <div class="col-sm-6 col-lg-3 timeline-item reveal">
+            <div class="timeline-year">1991</div>
+            <p class="project-meta mb-2">Founded</p>
+            <h3 class="h5 text-white">Navodaya High School</h3>
+            <p class="small text-white-50">30+ years of excellence, state-topping results, and alumni in leadership.</p>
+          </div>
+          <div class="col-sm-6 col-lg-3 timeline-item reveal">
+            <div class="timeline-year">2003</div>
+            <p class="project-meta mb-2">Expanded</p>
+            <h3 class="h5 text-white">Life Line e-Techno School</h3>
+            <p class="small text-white-50">A 100% board-pass record supported by arts, sports and academics.</p>
+          </div>
+          <div class="col-sm-6 col-lg-3 timeline-item reveal">
+            <div class="timeline-year">2018</div>
+            <p class="project-meta mb-2">Built</p>
+            <h3 class="h5 text-white">Oakdale Campus</h3>
+            <p class="small text-white-50">A 21st-century campus with world-class sports and wellness spaces.</p>
+          </div>
+          <div class="col-sm-6 col-lg-3 timeline-item reveal">
+            <div class="timeline-year">2025</div>
+            <p class="project-meta mb-2">Delivered</p>
+            <h3 class="h5 text-white">Rajarshi Campus</h3>
+            <p class="small text-white-50">Rooted in values and designed to shape global citizens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-cream" id="leadership">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow mb-2">Our Leadership</p>
+          <h2 class="section-title">The vision<br>behind the levels</h2>
+          <div class="section-rule"></div>
+        </div>
+        <div class="row g-5 align-items-start mt-1">
+          <div class="col-lg-4 reveal">
+            <div class="leadership-photo rounded-1">VRM</div>
+            <div class="bg-maroon text-center p-4">
+              <h3 class="h5 text-white mb-1">Mr. Venkata Reddy Meenige</h3>
+              <p class="small text-white-50 text-uppercase mb-0">Founder &amp; Chairman</p>
+            </div>
+          </div>
+          <div class="col-lg-8 reveal">
+            <div class="d-grid gap-2 mb-4">
+              <div class="role-chip p-3"><strong class="d-block text-maroon small">Chairman &amp; Managing Director</strong><span class="small text-muted-custom">TNL Works Private Limited</span></div>
+              <div class="role-chip p-3"><strong class="d-block text-maroon small">Founder &amp; Chairman</strong><span class="small text-muted-custom">Rajarshi Campus</span></div>
+              <div class="role-chip p-3"><strong class="d-block text-maroon small">Chairman</strong><span class="small text-muted-custom">Sri Balaji SR Educational Society</span></div>
+            </div>
+            <p class="body-copy">An educationist, investor, and construction mastermind, Mr. Venkata Reddy Meenige has spent 35+ years building institutions that shape lives. From a single school in 1991 to a thriving ecosystem spanning education, healthcare, and social impact — his journey is one of relentless purpose.</p>
+            <p class="body-copy">Three generations of Hyderabad families have placed their trust in the institutions he has built. That trust is his most enduring credential.</p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6"><div class="milestone-card p-3"><div class="h4 text-maroon mb-1">1991</div><strong class="small">Navodaya High School</strong><p class="small text-muted-custom mb-0">State-topping results and alumni in leadership.</p></div></div>
+              <div class="col-sm-6"><div class="milestone-card p-3"><div class="h4 text-maroon mb-1">2003</div><strong class="small">Life Line e-Techno School</strong><p class="small text-muted-custom mb-0">100% board-pass record, every year.</p></div></div>
+              <div class="col-sm-6"><div class="milestone-card p-3"><div class="h4 text-maroon mb-1">2018</div><strong class="small">Oakdale Campus</strong><p class="small text-muted-custom mb-0">Sports and wellness infrastructure.</p></div></div>
+              <div class="col-sm-6"><div class="milestone-card p-3"><div class="h4 text-maroon mb-1">2025</div><strong class="small">Rajarshi Campus</strong><p class="small text-muted-custom mb-0">Rooted in values, shaping global citizens.</p></div></div>
+            </div>
+            <div class="leadership-quote rounded-1 p-4 mt-4">
+              <p class="font-display fst-italic fs-5 mb-2">“In his experience of 35+ years, he still thrives to create more spaces, businesses, and people.”</p>
+              <span class="small text-uppercase opacity-50">Tradition at Heart, Excellence in Action</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-maroon dark-section" id="gallery">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow mb-2">Visual Journey</p>
+          <h2 class="section-title">Spaces worth seeing</h2>
+          <div class="section-rule"></div>
+          <p class="text-white-50 mb-5">A glimpse into the campuses and spaces that define The Next Level Works vision.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-lg-6 reveal">
+            <figure class="gallery-item large mb-0">
+              <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=85" alt="Professional sports field and stadium">
+              <figcaption class="gallery-caption"><i class="bi bi-camera me-2"></i>Oakdale · Sports Fields</figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-6">
+            <div class="row g-3">
+              <div class="col-sm-6 reveal">
+                <figure class="gallery-item mb-0">
+                  <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=85" alt="Landscaped contemporary campus building">
+                  <figcaption class="gallery-caption">Rajarshi · Grounds</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-6 reveal">
+                <figure class="gallery-item mb-0">
+                  <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=85" alt="Modern commercial building facade">
+                  <figcaption class="gallery-caption">Navodaya · Facade</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-6 reveal">
+                <figure class="gallery-item mb-0">
+                  <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85" alt="Bright modern learning and work interior">
+                  <figcaption class="gallery-caption">Rajarshi · Interiors</figcaption>
+                </figure>
+              </div>
+              <div class="col-sm-6 reveal">
+                <figure class="gallery-item mb-0">
+                  <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=900&q=85" alt="Outdoor sports court">
+                  <figcaption class="gallery-caption">Oakdale · Courts</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space bg-white" id="contact">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 reveal">
+            <p class="eyebrow mb-2">Get in Touch</p>
+            <h2 class="section-title">Let's build<br>something together</h2>
+            <div class="section-rule"></div>
+            <p class="body-copy">Whether you're a school, corporate tenant, sports academy, or investor — we'd love to show you what TNL Works has to offer.</p>
+            <div class="d-grid gap-4 mt-4">
+              <div class="d-flex gap-3">
+                <span class="icon-box"><i class="bi bi-telephone"></i></span>
+                <div><span class="eyebrow d-block mb-1">Phone / WhatsApp</span><a class="text-maroon text-decoration-none" href="tel:+917995111999">+91 79951 11999</a></div>
+              </div>
+              <div class="d-flex gap-3">
+                <span class="icon-box"><i class="bi bi-envelope"></i></span>
+                <div><span class="eyebrow d-block mb-1">Email</span><a class="text-maroon text-decoration-none" href="mailto:thenextlevel.projects@gmail.com">thenextlevel.projects@gmail.com</a></div>
+              </div>
+              <div class="d-flex gap-3">
+                <span class="icon-box"><i class="bi bi-geo-alt"></i></span>
+                <div><span class="eyebrow d-block mb-1">Registered Office</span><p class="small text-muted-custom mb-0">3-67/2/1, Navodaya Estates, Nallagandla,<br>Serilingampally, Hyderabad — 500 019</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="bg-cream border p-4 p-md-5 rounded-1">
+              <h3 class="h3 text-maroon fst-italic mb-4">Send us an enquiry</h3>
+              <form id="enquiryForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="name">Your Name *</label>
+                    <input class="form-control" id="name" name="name" type="text" placeholder="Full name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">Phone *</label>
+                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" name="email" type="email" placeholder="your@email.com">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="project">Project of Interest</label>
+                    <select class="form-select" id="project" name="project">
+                      <option value="">— Select —</option>
+                      <option>Oakdale Campus</option>
+                      <option>Rajarshi Campus</option>
+                      <option>Navodaya Estates — Leasing</option>
+                      <option>Life Line Campus</option>
+                      <option>Pipeline Project</option>
+                      <option>Land Partnership</option>
+                      <option>Development Partnership</option>
+                      <option>General Inquiry</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-maroon w-100 py-3 text-uppercase fw-semibold" type="submit">Send Enquiry <i class="bi bi-arrow-right ms-1"></i></button>
+                    <p class="small text-muted-custom text-center mt-2 mb-0">We typically respond within one business day</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4 pb-4 border-bottom border-light border-opacity-10">
+        <div class="col-lg-5 text-center text-lg-start">
+          <div class="font-display fs-4 text-white">The Next Level <span style="color:var(--tnl-gold)">Infra &amp; Leasing</span></div>
+          <div class="small text-uppercase opacity-50 mt-1">TNL Works Private Limited · Hyderabad</div>
+        </div>
+        <div class="col-lg-7">
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-4 small">
+            <a href="#about">About</a>
+            <a href="#models">Our Models</a>
+            <a href="#projects">Projects</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-4">
+        <p class="small opacity-50 mb-1">© 2026 TNL Works Private Limited. All rights reserved.</p>
+        <p class="font-display fst-italic mb-0">Tradition at Heart, Excellence in Action</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/917995111999" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const navbar = document.getElementById("mainNav");
+    const navMenu = document.getElementById("navbarMenu");
+
+    window.addEventListener("scroll", () => {
+      navbar.classList.toggle("is-scrolled", window.scrollY > 40);
+    });
+
+    document.querySelectorAll("#navbarMenu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        bootstrap.Collapse.getOrCreateInstance(navMenu, { toggle: false }).hide();
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+    document.getElementById("enquiryForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const text = [
+        "Hi TNL Works,",
+        "",
+        `Name: ${form.get("name")}`,
+        `Phone: ${form.get("phone")}`,
+        `Email: ${form.get("email") || "Not provided"}`,
+        `Project: ${form.get("project") || "General Inquiry"}`,
+        `Message: ${form.get("message") || "No message"}`
+      ].join("\n");
+      window.open(`https://wa.me/917995111999?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    });
+  </script>
+</body>
+</html>
