@@ -1,0 +1,462 @@
+:root {
+    --swarna-gold: #be9874;
+    --swarna-deep-gold: #9f754e;
+    --swarna-brown: #644222;
+    --swarna-ink: #191611;
+    --swarna-cream: #f7f5f1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.swarna-skip-link {
+    background: var(--swarna-brown);
+    color: #fff;
+    left: 15px;
+    padding: 10px 18px;
+    position: fixed;
+    top: -80px;
+    z-index: 9999;
+}
+
+.swarna-skip-link:focus {
+    top: 15px;
+}
+
+/* Keep the original two-level RioRelax header, with a white background. */
+.swarna-header .header-top.second-header,
+.swarna-header .menu-area,
+.swarna-header .menu-area.sticky-menu {
+    background: #fff;
+}
+
+.swarna-header .header-top.second-header {
+    border-bottom: 1px solid #eee8df;
+}
+
+.swarna-header .header-cta span,
+.swarna-header .header-cta strong,
+.swarna-header .header-cta i,
+.swarna-header .header-social a {
+    color: var(--swarna-ink);
+}
+
+.swarna-header .header-cta i,
+.swarna-header .header-social a:hover {
+    color: var(--swarna-gold);
+}
+
+.swarna-header .menu-area {
+    margin-bottom: 0;
+    position: relative;
+    transition: padding .3s ease;
+    z-index: 99;
+}
+
+.swarna-header .menu-area.sticky-menu {
+    box-shadow: 0 3px 18px rgba(35, 26, 16, .06);
+    margin-top: 0;
+    opacity: 1;
+}
+
+.swarna-header .main-menu ul li {
+    margin-left: 19px;
+}
+
+.swarna-header .main-menu ul li a {
+    color: var(--swarna-ink);
+    font-size: 13px;
+    letter-spacing: .5px;
+    padding: 36px 0;
+    text-transform: none;
+}
+
+.swarna-header .main-menu ul li:hover > a {
+    color: var(--swarna-gold);
+}
+
+.swarna-header .swarna-logo img {
+    max-height: 70px;
+    object-fit: contain;
+    width: 175px;
+}
+
+.swarna-header .top-btn {
+    background: var(--swarna-gold);
+    letter-spacing: .5px;
+    padding: 17px 18px;
+}
+
+.swarna-header .top-btn:hover {
+    background: var(--swarna-brown);
+}
+
+.swarna-header .menu-area.swarna-compact .main-menu ul li a {
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+.swarna-header .menu-area.swarna-compact .swarna-logo img {
+    max-height: 56px;
+}
+
+.swarna-mobile-book {
+    display: none;
+}
+
+/* The supplied arrival film occupies the original slider position. */
+.swarna-arrival-film {
+    background: #080706;
+    height: 83vh;
+    min-height: 580px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.swarna-film-stage {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.swarna-film-stage video,
+.swarna-film-still {
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: center 48%;
+    position: absolute;
+    width: 100%;
+}
+
+.swarna-film-stage video {
+    z-index: 1;
+}
+
+.swarna-film-still {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .9s ease;
+    z-index: 2;
+}
+
+.swarna-film-stage.show-still .swarna-film-still {
+    opacity: 1;
+}
+
+.swarna-film-control {
+    align-items: center;
+    background: rgba(20, 16, 12, .45);
+    border: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 50%;
+    bottom: 25px;
+    color: #fff;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    position: absolute;
+    right: 28px;
+    width: 44px;
+    z-index: 3;
+}
+
+.swarna-film-control .play-icon,
+.swarna-film-control.paused .pause-icon {
+    display: none;
+}
+
+.swarna-film-control.paused .play-icon {
+    display: inline-block;
+}
+
+/* Swarna content, still using the original theme components. */
+.swarna-welcome {
+    background: #fff;
+}
+
+.swarna-welcome .section-title h1 {
+    color: var(--swarna-ink);
+    font-family: "Jost", sans-serif;
+    font-size: clamp(48px, 6vw, 82px);
+    font-weight: 500;
+    line-height: 1.08;
+    margin-bottom: 35px;
+}
+
+.swarna-welcome-lines {
+    margin: 0 auto 28px;
+}
+
+.swarna-welcome-lines p {
+    color: var(--swarna-ink);
+    font-family: "Jost", sans-serif;
+    font-size: clamp(22px, 2.6vw, 34px);
+    line-height: 1.35;
+    margin: 0;
+}
+
+.swarna-intro,
+.swarna-copy-block {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 760px;
+}
+
+.swarna-vision,
+.swarna-pavilion {
+    padding: 105px 0;
+}
+
+.swarna-vision-image {
+    height: 680px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.swarna-pavilion-image {
+    height: 650px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.swarna-residence-image {
+    overflow: hidden;
+}
+
+.swarna-residence-image img {
+    height: min(72vw, 820px);
+    object-fit: cover;
+    width: 100%;
+}
+
+.swarna-copy-block p {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.swarna-gallery .services-thumb img {
+    height: 330px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.swarna-gallery .services-content {
+    min-height: 230px;
+}
+
+.swarna-uluwatu::before {
+    background: rgba(24, 17, 11, .64);
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.swarna-uluwatu .container {
+    position: relative;
+    z-index: 2;
+}
+
+.swarna-uluwatu .section-title h5,
+.swarna-uluwatu .section-title h2,
+.swarna-uluwatu .section-title p {
+    color: #fff;
+}
+
+.swarna-uluwatu .section-title p {
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.swarna-before-arrival .blog-thumb2 img {
+    height: 275px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.swarna-before-arrival .blog-content2 {
+    min-height: 245px;
+}
+
+.swarna-footer-logo {
+    background: #fff;
+    padding: 8px 12px;
+    width: 200px;
+}
+
+@media (max-width: 1399px) {
+    .swarna-header .main-menu ul li {
+        margin-left: 13px;
+    }
+
+    .swarna-header .main-menu ul li a {
+        font-size: 12px;
+    }
+
+    .swarna-header .swarna-logo img {
+        width: 155px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .swarna-header .main-menu ul li {
+        margin-left: 9px;
+    }
+
+    .swarna-header .main-menu ul li a {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .swarna-header .menu-area {
+        min-height: 86px;
+    }
+
+    .swarna-header .swarna-logo {
+        padding: 8px 0;
+        position: relative;
+        z-index: 999;
+    }
+
+    .swarna-header .swarna-logo img {
+        height: 64px;
+        width: 150px;
+    }
+
+    .swarna-mobile-book {
+        display: block;
+        padding-right: 58px;
+        position: relative;
+        z-index: 999;
+    }
+
+    .swarna-mobile-book .top-btn {
+        display: inline-block;
+        float: none;
+        font-size: 12px;
+        padding: 10px 15px;
+        width: auto;
+    }
+
+    .swarna-header .mean-container a.meanmenu-reveal {
+        color: var(--swarna-ink);
+        margin-top: -65px;
+    }
+
+    .swarna-header .mean-container a.meanmenu-reveal span {
+        background: var(--swarna-ink);
+    }
+
+    .swarna-header .mean-container .mean-nav {
+        background: #fff;
+        margin-top: 0;
+    }
+
+    .swarna-header .mean-container .mean-nav ul li a {
+        border-color: #eee8df;
+        color: var(--swarna-ink);
+        font-family: "Jost", sans-serif;
+    }
+
+    .swarna-arrival-film {
+        height: 70vh;
+        min-height: 500px;
+    }
+
+    .swarna-vision,
+    .swarna-pavilion {
+        padding: 80px 0;
+    }
+
+    .swarna-vision .feature-img,
+    .swarna-pavilion .feature-img {
+        margin-bottom: 50px;
+    }
+
+    .swarna-vision-image,
+    .swarna-pavilion-image {
+        height: 650px;
+    }
+}
+
+@media (max-width: 767px) {
+    .swarna-header .menu-area {
+        min-height: 78px;
+    }
+
+    .swarna-header .swarna-logo img {
+        height: 58px;
+        width: 130px;
+    }
+
+    .swarna-mobile-book {
+        padding-right: 48px;
+    }
+
+    .swarna-mobile-book .top-btn {
+        font-size: 10px;
+        padding: 9px 12px;
+    }
+
+    .swarna-header .mean-container a.meanmenu-reveal {
+        margin-top: -61px;
+    }
+
+    .swarna-arrival-film {
+        height: 64vh;
+        min-height: 420px;
+    }
+
+    .swarna-welcome .section-title h1 {
+        font-size: 45px;
+    }
+
+    .swarna-welcome-lines p {
+        font-size: 23px;
+    }
+
+    .swarna-vision,
+    .swarna-pavilion {
+        padding: 65px 0;
+    }
+
+    .swarna-vision-image,
+    .swarna-pavilion-image,
+    .swarna-residence-image img {
+        height: 460px;
+    }
+
+    .swarna-gallery .services-thumb img {
+        height: 290px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swarna-header .swarna-logo img {
+        width: 108px;
+    }
+
+    .swarna-mobile-book .top-btn {
+        padding: 8px 9px;
+    }
+
+    .swarna-arrival-film {
+        height: 58vh;
+        min-height: 390px;
+    }
+
+    .swarna-vision-image,
+    .swarna-pavilion-image,
+    .swarna-residence-image img {
+        height: 400px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
